@@ -1,0 +1,43 @@
+.video-player-container{margin-bottom:2rem}
+.video-player-placeholder{width:100%;aspect-ratio:16/9;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.video-player-placeholder::before{content:'';position:absolute;inset:0;background:var(--bg-tertiary);opacity:0.5}
+.video-player-placeholder .play-icon{width:72px;height:72px;border-radius:50%;background:var(--gradient-gold);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all var(--transition);position:relative;z-index:1;box-shadow:0 4px 24px var(--shadow)}
+.video-player-placeholder .play-icon:hover{transform:scale(1.1);box-shadow:0 8px 32px var(--shadow-lg)}
+.video-player-placeholder .play-icon svg{width:28px;height:28px;margin-left:4px}
+.video-info{padding:1.25rem 0}
+.video-info .video-title{font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3}
+.video-info .video-meta{display:flex;align-items:center;gap:0.75rem;font-size:0.8rem;color:var(--text-muted);flex-wrap:wrap}
+.video-info .video-meta .separator{width:3px;height:3px;border-radius:50%;background:var(--text-muted)}
+.channel-info{display:flex;align-items:center;gap:0.75rem;padding:1rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:1rem 0}
+.channel-info .channel-avatar{width:44px;height:44px;border-radius:50%;background:var(--gradient-gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;color:#000;flex-shrink:0}
+.channel-info .channel-details{flex:1}
+.channel-info .channel-name{font-weight:600;font-size:0.9rem}
+.channel-info .channel-subs{font-size:0.75rem;color:var(--text-muted)}
+.channel-info .subscribe-btn{padding:0.5rem 1.25rem;border-radius:var(--radius-sm);font-size:0.8rem;font-weight:600;cursor:pointer;transition:all var(--transition);background:var(--gradient-gold);color:#000;border:none}
+.channel-info .subscribe-btn:hover{opacity:0.9;transform:translateY(-1px)}
+.channel-info .subscribe-btn.subscribed{background:var(--bg-tertiary);color:var(--text-secondary);border:1px solid var(--border)}
+.video-actions{display:flex;align-items:center;gap:0.75rem;padding:0.75rem 0;flex-wrap:wrap}
+.video-actions .action-btn{display:flex;align-items:center;gap:0.4rem;padding:0.5rem 1rem;border-radius:var(--radius-sm);background:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary);font-size:0.8rem;font-weight:500;cursor:pointer;transition:all var(--transition)}
+.video-actions .action-btn:hover{background:var(--bg-card-hover);color:var(--text-primary);border-color:var(--accent)}
+.video-actions .action-btn.active{color:var(--accent);border-color:var(--accent);background:var(--accent-dim)}
+.related-videos .section-title{font-size:1rem;font-weight:600;margin-bottom:1rem}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.video-grid .video-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all var(--transition);cursor:pointer}
+.video-grid .video-card:hover{border-color:var(--border-light);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+.video-grid .video-card .thumb{height:150px;background:var(--bg-tertiary);background-size:cover;background-position:center;position:relative}
+.video-grid .video-card .thumb .duration{position:absolute;bottom:0.5rem;right:0.5rem;background:rgba(0,0,0,0.85);color:#fff;padding:0.15rem 0.4rem;border-radius:3px;font-size:0.7rem;font-family:var(--mono)}
+.video-grid .video-card .card-info{padding:0.75rem}
+.video-grid .video-card .card-title{font-size:0.85rem;font-weight:600;margin-bottom:0.3rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3}
+.video-grid .video-card .card-channel{font-size:0.75rem;color:var(--text-secondary)}
+.video-grid .video-card .card-meta{font-size:0.7rem;color:var(--text-muted);margin-top:0.15rem}
+@media(max-width:768px){
+.video-player-placeholder .play-icon{width:56px;height:56px}
+.video-player-placeholder .play-icon svg{width:22px;height:22px}
+.video-info .video-title{font-size:1rem}
+.channel-info{gap:0.5rem}
+.channel-info .channel-avatar{width:36px;height:36px;font-size:0.8rem}
+.channel-info .subscribe-btn{padding:0.4rem 1rem;font-size:0.75rem}
+.video-actions .action-btn{padding:0.4rem 0.75rem;font-size:0.75rem}
+.video-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem}
+.video-grid .video-card .thumb{height:120px}
+}

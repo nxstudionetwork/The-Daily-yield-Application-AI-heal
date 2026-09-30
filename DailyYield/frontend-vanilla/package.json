@@ -1,0 +1,16 @@
+{
+  "name": "frontend-vanilla",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./static/css/tailwind.css",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.3.3",
+    "postcss": "^8.5.25",
+    "autoprefixer": "^10.5.4",
+    "vite": "^5.0.0"
+  }
+}

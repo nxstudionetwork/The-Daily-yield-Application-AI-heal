@@ -1,0 +1,42 @@
+.support-search{max-width:600px;margin:0 auto 2.5rem;position:relative}
+.support-search .search-wrapper{position:relative}
+.support-search .search-icon{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:1rem;pointer-events:none}
+.support-search input{width:100%;padding:0.85rem 1rem 0.85rem 2.75rem;border-radius:var(--radius);font-size:0.9rem;background:var(--bg-card);border:1px solid var(--border);color:var(--text-primary);transition:border-color var(--transition)}
+.support-search input:focus{outline:none;border-color:var(--accent)}
+.support-search input::placeholder{color:var(--text-muted)}
+.support-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;transition:all var(--transition)}
+.support-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+.support-card .card-icon{width:40px;height:40px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:0.75rem;background:var(--accent-dim);color:var(--accent)}
+.support-card .card-title{font-weight:600;font-size:0.95rem;margin-bottom:0.4rem}
+.support-card .card-desc{font-size:0.8rem;color:var(--text-secondary);line-height:1.5}
+.support-card .card-link{display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.75rem;font-size:0.8rem;color:var(--accent);text-decoration:none;transition:gap var(--transition)}
+.support-card .card-link:hover{gap:0.5rem}
+.faq-category{margin-bottom:2.5rem}
+.faq-category .category-title{font-size:1rem;font-weight:700;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+.faq-item-expandable{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.5rem;overflow:hidden}
+.faq-item-expandable .faq-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;padding:1rem 1.25rem;background:none;border:none;color:var(--text-primary);cursor:pointer;text-align:left;font-size:0.9rem;font-weight:500;font-family:var(--font);transition:background var(--transition)}
+.faq-item-expandable .faq-toggle:hover{background:var(--bg-card-hover)}
+.faq-item-expandable .faq-toggle .toggle-arrow{color:var(--text-muted);transition:transform var(--transition);flex-shrink:0;margin-left:1rem;font-size:0.9rem}
+.faq-item-expandable.open .faq-toggle .toggle-arrow{transform:rotate(180deg)}
+.faq-item-expandable .faq-expand-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.faq-item-expandable.open .faq-expand-content{max-height:400px}
+.faq-item-expandable .faq-expand-content p{padding:0 1.25rem 1rem;font-size:0.85rem;line-height:1.65;color:var(--text-secondary)}
+.contact-form{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;max-width:600px}
+.contact-form .form-title{font-size:1.1rem;font-weight:700;margin-bottom:1.5rem}
+.contact-form .form-group{margin-bottom:1.25rem}
+.contact-form .form-label{display:block;font-size:0.8rem;font-weight:500;color:var(--text-secondary);margin-bottom:0.4rem}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:0.65rem 0.85rem;border-radius:var(--radius-sm);font-size:0.85rem;background:var(--input-bg);border:1px solid var(--border);color:var(--text-primary);font-family:var(--font);transition:border-color var(--transition)}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent)}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--text-muted)}
+.contact-form textarea{min-height:120px;resize:vertical}
+.contact-form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.75rem center}
+.contact-form .submit-btn{width:100%;padding:0.7rem;border-radius:var(--radius-sm);font-size:0.9rem;font-weight:600;cursor:pointer;transition:all var(--transition);background:var(--gradient-gold);color:#000;border:none;margin-top:0.5rem}
+.contact-form .submit-btn:hover{opacity:0.9;transform:translateY(-1px)}
+.chat-widget{position:fixed;bottom:calc(var(--bottom-nav-h) + 1rem);right:1rem;width:60px;height:60px;border-radius:50%;background:var(--gradient-gold);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 24px var(--shadow);transition:all var(--transition);z-index:100;font-size:1.2rem;color:#000}
+.chat-widget:hover{transform:scale(1.1);box-shadow:0 8px 32px var(--shadow-lg)}
+.chat-widget .chat-badge{position:absolute;top:-2px;right:-2px;width:18px;height:18px;border-radius:50%;background:var(--negative);color:#fff;font-size:0.65rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+@media(max-width:768px){
+.support-search{margin-bottom:2rem}
+.contact-form{padding:1.5rem}
+.chat-widget{width:50px;height:50px;font-size:1rem;bottom:calc(var(--bottom-nav-h) + 0.75rem);right:0.75rem}
+}

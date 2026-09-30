@@ -1,0 +1,409 @@
+/* ==========================================================================
+   LAYOUT — The Daily Yield
+   Fixed header, ticker, sidebar, main content, right sidebar, and grid.
+   ========================================================================== */
+
+/* ── App Shell ───────────────────────────────────────────────────────────── */
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header (fixed, 60px) ────────────────────────────────────────────────── */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 100;
+  gap: 0.5rem;
+}
+
+/* ── Ticker Bar (fixed below header) ─────────────────────────────────────── */
+.ticker-bar {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  height: var(--ticker-h);
+  background: var(--ticker-bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  overflow: hidden;
+}
+
+/* ── Sidebar (260px, fixed, scrollable) ──────────────────────────────────── */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-overlay);
+  z-index: 199;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Desktop Sidebar Mode (≥1280px: static push) ────────────────────────── */
+@media (min-width: 1280px) {
+  .sidebar {
+    transform: translateX(0);
+    position: fixed;
+    top: var(--header-h);
+    height: calc(100vh - var(--header-h));
+  }
+
+  .sidebar-overlay {
+    display: none;
+  }
+
+  .main-layout {
+    margin-left: var(--sidebar-w);
+  }
+
+  .header {
+    left: var(--sidebar-w);
+  }
+
+  .ticker-bar {
+    left: var(--sidebar-w);
+  }
+}
+
+/* ── Main Layout ─────────────────────────────────────────────────────────── */
+.main-layout {
+  flex: 1;
+  margin-top: calc(var(--header-h) + var(--ticker-h));
+  min-height: calc(100vh - var(--header-h) - var(--ticker-h));
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ── Two-Column Layout (content + right sidebar) ────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr var(--right-sidebar-w);
+  gap: 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.two-col-main {
+  min-width: 0;
+}
+
+.two-col-side {
+  min-width: 0;
+}
+
+/* ── Right Sidebar Widgets ───────────────────────────────────────────────── */
+.right-sidebar {
+  position: sticky;
+  top: calc(var(--header-h) + var(--ticker-h) + 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.widget {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.widget-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.widget-body {
+  padding: 0.75rem 1rem;
+}
+
+/* ── Bottom Nav (mobile, fixed bottom) ───────────────────────────────────── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--bottom-nav-h);
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.main-layout.has-bottom-nav {
+  margin-bottom: var(--bottom-nav-h);
+}
+
+/* ── Notifications Panel Positioning ─────────────────────────────────────── */
+.notifications-panel {
+  position: fixed;
+  top: calc(var(--header-h) + var(--ticker-h));
+  right: 0;
+  width: 380px;
+  max-height: calc(100vh - var(--header-h) - var(--ticker-h) - var(--bottom-nav-h));
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 0 0 0 var(--radius);
+  z-index: 150;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.notifications-panel.open {
+  transform: translateX(0);
+}
+
+/* ── Search Panel Positioning ────────────────────────────────────────────── */
+.search-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+  background: var(--bg-overlay);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.search-panel.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Command Palette Positioning ─────────────────────────────────────────── */
+.command-palette {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 12vh;
+  background: var(--bg-overlay);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.command-palette.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Modal Positioning ───────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-overlay);
+  z-index: 350;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Toast Positioning ───────────────────────────────────────────────────── */
+.toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 500;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+/* ── Shortcuts Overlay Positioning ───────────────────────────────────────── */
+.shortcuts-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-overlay);
+  z-index: 350;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.shortcuts-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── AI Page Layout ──────────────────────────────────────────────────────── */
+.ai-page {
+  display: flex;
+  height: calc(100vh - var(--header-h) - var(--ticker-h));
+  margin-top: calc(var(--header-h) + var(--ticker-h));
+}
+
+.ai-sidebar {
+  width: 280px;
+  border-right: 1px solid var(--border);
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.ai-chats-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.ai-messages {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* ── Settings Layout ─────────────────────────────────────────────────────── */
+.settings-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* ── Responsive Layout Adjustments ───────────────────────────────────────── */
+@media (max-width: 1280px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .two-col-side {
+    grid-template-columns: 1fr;
+  }
+
+  .right-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-h: 52px;
+    --sidebar-w: 280px;
+  }
+
+  .header-center {
+    display: none;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .bottom-nav {
+    display: flex;
+  }
+
+  .main-layout {
+    margin-bottom: var(--bottom-nav-h);
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .two-col {
+    padding: 1rem;
+  }
+
+  .notifications-panel {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: calc(var(--bottom-nav-h) + 0.5rem);
+  }
+
+  .toast {
+    max-width: 100%;
+  }
+}

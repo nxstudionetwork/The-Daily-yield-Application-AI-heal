@@ -1,0 +1,96 @@
+<!-- ============================================================
+   Daily Yield — AI Page
+   AI-powered assistant and conversation interface
+   ============================================================ -->
+
+<div class="ai-page">
+  <!-- AI Header -->
+  <div class="section-header">
+    <h1 class="section-title">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold);"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><path d="M12 16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z"></path><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"></path><path d="M4 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M16 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"></path></svg>
+      AI Assistant
+    </h1>
+    <span class="topic-chip">New Chat</span>
+  </div>
+
+  <!-- AI Chat Interface -->
+  <section class="card" style="padding: var(--spacing-lg); min-height: 500px; display: flex; flex-direction: column;">
+    <!-- Chat Messages -->
+    <div class="ai-chat" style="flex: 1; overflow-y: auto; padding: var(--spacing-md); display: flex; flex-direction: column; gap: var(--spacing-lg);">
+      <!-- AI Welcome Message -->
+      <div class="ai-message ai-message-assistant">
+        <div class="ai-message-avatar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><path d="M12 16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z"></path><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"></path><path d="M4 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M16 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"></path></svg>
+        </div>
+        <div class="ai-message-content">
+          <div class="ai-message-text">
+            Hello! I'm your AI assistant. I can help you with:
+          </div>
+          <ul style="margin-top: var(--spacing-sm); padding-left: var(--spacing-lg); color: var(--text-secondary);">
+            <li>Summarizing news articles</li>
+            <li>Answering questions about markets</li>
+            <li>Providing investment insights</li>
+            <li>Explaining complex topics</li>
+          </ul>
+          <div class="ai-message-text" style="margin-top: var(--spacing-sm);">
+            How can I assist you today?
+          </div>
+        </div>
+      </div>
+
+      <!-- User Message -->
+      <div class="ai-message ai-message-user">
+        <div class="ai-message-content">
+          <div class="ai-message-text">
+            What's the latest news about the tech sector?
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Response -->
+      <div class="ai-message ai-message-assistant">
+        <div class="ai-message-avatar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><path d="M12 16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z"></path><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"></path><path d="M4 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M16 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"></path></svg>
+        </div>
+        <div class="ai-message-content">
+          <div class="ai-message-text">
+            Here are the latest tech sector highlights:
+          </div>
+          <div style="margin-top: var(--spacing-sm);">
+            <strong>📈 Market Performance:</strong> Major tech stocks are up 1.5-2% today as investors react positively to earnings expectations.
+          </div>
+          <div style="margin-top: var(--spacing-sm);">
+            <strong>🤖 AI Breakthrough:</strong> Researchers announced a new AI model that achieves human-level reasoning on complex tasks.
+          </div>
+          <div style="margin-top: var(--spacing-sm);">
+            <strong>🏢 Regulatory News:</strong> The EU is finalizing new AI regulations that could impact tech companies operating in the region.
+          </div>
+          <div class="ai-message-text" style="margin-top: var(--spacing-sm);">
+            Would you like me to dive deeper into any of these topics?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Input -->
+    <div class="ai-input-area" style="padding-top: var(--spacing-md); border-top: 1px solid var(--border);">
+      <div style="display: flex; gap: var(--spacing-sm); align-items: flex-end;">
+        <button class="btn-icon" style="flex-shrink: 0;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+        </button>
+        <textarea placeholder="Ask me anything..." style="flex: 1; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-sm) var(--spacing-md); color: var(--text-primary); resize: none; min-height: 44px; max-height: 120px; font-family: var(--font-sans);"></textarea>
+        <button class="btn-icon" style="flex-shrink: 0;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+        </button>
+        <button class="btn btn-primary" style="flex-shrink: 0; padding: var(--spacing-sm) var(--spacing-lg);">
+          Send
+        </button>
+      </div>
+      <div style="display: flex; gap: var(--spacing-md); margin-top: var(--spacing-sm);">
+        <span class="topic-chip" style="font-size: var(--font-size-xs); padding: 4px 10px;">Summarize news</span>
+        <span class="topic-chip" style="font-size: var(--font-size-xs); padding: 4px 10px;">Market analysis</span>
+        <span class="topic-chip" style="font-size: var(--font-size-xs); padding: 4px 10px;">Explain topic</span>
+      </div>
+    </div>
+  </section>
+</div>

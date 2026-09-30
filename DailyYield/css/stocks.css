@@ -1,0 +1,24 @@
+.stocks-tabs{display:flex;gap:0.25rem;margin-bottom:1.5rem;border-bottom:1px solid var(--border);overflow-x:auto}
+.stocks-tabs::-webkit-scrollbar{height:0}
+.index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.index-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem}
+.index-name{font-size:0.9rem;font-weight:600}
+.index-symbol{font-size:0.75rem;color:var(--text-muted);margin-bottom:0.25rem}
+.index-price{font-size:1.3rem;font-weight:700;margin:0.25rem 0}
+.index-change{font-size:0.85rem;font-weight:600}
+.index-change.positive{color:var(--positive)}.index-change.negative{color:var(--negative)}.index-change.neutral{color:var(--neutral)}
+.index-sparkline{margin-top:0.5rem}
+.stock-list-header{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 100px;gap:0.5rem;padding:0.5rem 0.75rem;font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.03em;border-bottom:1px solid var(--border)}
+.stock-list{display:flex;flex-direction:column}
+.stock-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 100px;gap:0.5rem;padding:0.65rem 0.75rem;border-bottom:1px solid var(--border-light);align-items:center;transition:background var(--transition);cursor:pointer}
+.stock-row:hover{background:var(--bg-tertiary)}
+.stock-symbol-cell{display:flex;flex-direction:column}
+.stock-symbol{font-weight:600;font-size:0.9rem}
+.stock-name{font-size:0.75rem;color:var(--text-muted)}
+.stock-price{font-weight:600;font-family:var(--mono);font-size:0.9rem}
+.stock-change{font-weight:600;font-size:0.85rem;font-family:var(--mono)}
+.stock-change.positive{color:var(--positive)}.stock-change.negative{color:var(--negative)}.stock-change.neutral{color:var(--neutral)}
+.stock-volume,.stock-mcap{font-size:0.85rem;color:var(--text-secondary)}
+.stock-sparkline{justify-self:end}
+.stock-row-mini{display:flex;align-items:center;gap:1rem;padding:0.5rem 0.75rem;border-bottom:1px solid var(--border-light);cursor:pointer;transition:background var(--transition)}
+.stock-row-mini:hover{background:var(--bg-tertiary)}

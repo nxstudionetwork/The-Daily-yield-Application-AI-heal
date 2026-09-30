@@ -1,0 +1,150 @@
+<!-- ============================================================
+   Daily Yield — Stocks Page
+   Market data, portfolio tracking, and investment insights
+   ============================================================ -->
+
+<div class="stocks-page">
+  <!-- Portfolio Summary -->
+  <section class="card" style="padding: var(--spacing-xl);">
+    <div class="section-header">
+      <h1 class="section-title">Your Portfolio</h1>
+      <span class="topic-chip">Edit Holdings</span>
+    </div>
+    <div style="display: flex; gap: var(--spacing-2xl); align-items: flex-end; margin-top: var(--spacing-lg);">
+      <div>
+        <div style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">Total Value</div>
+        <div class="portfolio-value">$127,845.32</div>
+      </div>
+      <div>
+        <div style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">Today's Change</div>
+        <div style="font-size: var(--font-size-xl); font-weight: 700; color: var(--success);">+$2,341.50 (+1.87%)</div>
+      </div>
+      <div style="margin-left: auto;">
+        <button class="btn btn-primary">Trade</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Market Indices -->
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Market Indices</h2>
+    </div>
+    <div class="market-snapshot">
+      <div class="market-ticker">
+        <span class="market-ticker-name">S&P 500</span>
+        <span class="market-ticker-value">4,789.52</span>
+        <span class="market-ticker-change positive">+1.24%</span>
+      </div>
+      <div class="market-ticker">
+        <span class="market-ticker-name">NASDAQ</span>
+        <span class="market-ticker-value">15,234.18</span>
+        <span class="market-ticker-change positive">+1.87%</span>
+      </div>
+      <div class="market-ticker">
+        <span class="market-ticker-name">DOW</span>
+        <span class="market-ticker-value">37,654.32</span>
+        <span class="market-ticker-change positive">+0.92%</span>
+      </div>
+      <div class="market-ticker">
+        <span class="market-ticker-name">RUSSELL 2000</span>
+        <span class="market-ticker-value">2,045.67</span>
+        <span class="market-ticker-change negative">-0.34%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Watchlist -->
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Watchlist</h2>
+      <span class="section-link">+ Add Stock</span>
+    </div>
+    <div class="card" style="overflow: hidden;">
+      <div class="stocks-table-wrap">
+        <table class="stocks-table">
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Price</th>
+              <th>Change</th>
+              <th>% Change</th>
+              <th>Volume</th>
+              <th>Market Cap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>AAPL</strong><br><span style="color: var(--text-muted); font-size: var(--font-size-xs);">Apple Inc.</span></td>
+              <td>$189.45</td>
+              <td style="color: var(--success);">+$2.34</td>
+              <td style="color: var(--success);">+1.25%</td>
+              <td>52.3M</td>
+              <td>$2.95T</td>
+            </tr>
+            <tr>
+              <td><strong>MSFT</strong><br><span style="color: var(--text-muted); font-size: var(--font-size-xs);">Microsoft Corp.</span></td>
+              <td>$378.91</td>
+              <td style="color: var(--success);">+$5.67</td>
+              <td style="color: var(--success);">+1.52%</td>
+              <td>28.7M</td>
+              <td>$2.81T</td>
+            </tr>
+            <tr>
+              <td><strong>GOOGL</strong><br><span style="color: var(--text-muted); font-size: var(--font-size-xs);">Alphabet Inc.</span></td>
+              <td>$141.23</td>
+              <td style="color: var(--danger);">-$0.89</td>
+              <td style="color: var(--danger);">-0.63%</td>
+              <td>21.4M</td>
+              <td>$1.78T</td>
+            </tr>
+            <tr>
+              <td><strong>AMZN</strong><br><span style="color: var(--text-muted); font-size: var(--font-size-xs);">Amazon.com Inc.</span></td>
+              <td>$153.42</td>
+              <td style="color: var(--success);">+$1.78</td>
+              <td style="color: var(--success);">+1.17%</td>
+              <td>35.6M</td>
+              <td>$1.59T</td>
+            </tr>
+            <tr>
+              <td><strong>TSLA</strong><br><span style="color: var(--text-muted); font-size: var(--font-size-xs);">Tesla Inc.</span></td>
+              <td>$248.67</td>
+              <td style="color: var(--success);">+$8.92</td>
+              <td style="color: var(--success);">+3.72%</td>
+              <td>112.4M</td>
+              <td>$789B</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Insights -->
+  <section class="ai-picks-card">
+    <div class="section-header">
+      <h2 class="section-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold);"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><path d="M12 16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z"></path><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"></path><path d="M4 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M16 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"></path></svg>
+        AI Market Insights
+      </h2>
+    </div>
+    <div class="news-list-item" style="margin-bottom: var(--spacing-sm);">
+      <div class="news-list-body">
+        <h4 class="news-list-title">Tech sector showing strong momentum heading into earnings season</h4>
+        <span class="news-list-meta">Confidence: 87%</span>
+      </div>
+    </div>
+    <div class="news-list-item" style="margin-bottom: var(--spacing-sm);">
+      <div class="news-list-body">
+        <h4 class="news-list-title">Energy stocks may see volatility due to OPEC+ decisions</h4>
+        <span class="news-list-meta">Confidence: 72%</span>
+      </div>
+    </div>
+    <div class="news-list-item">
+      <div class="news-list-body">
+        <h4 class="news-list-title">Consumer discretionary sector poised for growth</h4>
+        <span class="news-list-meta">Confidence: 65%</span>
+      </div>
+    </div>
+  </section>
+</div>

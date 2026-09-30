@@ -1,0 +1,335 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+ datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+ }
+
+ // Users and authentication
+ model User {
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  phone       String?  @unique
+  password    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  profile     Profile?
+  sessions    Session[]
+  devices     Device[]
+  roles       Role[]   @relation("UserRoles")
+  loginHistory LoginHistory[]
+ }
+
+ model Profile {
+  id        Int    @id @default(autoincrement())
+  userId    Int    @unique
+  displayName String
+  avatarUrl String?
+  bio       String?
+  user      User   @relation(fields: [userId], references: [id])
+ }
+
+ model Session {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  token      String   @unique
+  createdAt  DateTime @default(now())
+  expiresAt  DateTime
+  user       User     @relation(fields: [userId], references: [id])
+ }
+
+ model Device {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  deviceId    String   @unique
+  name        String
+  lastSeen    DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+ }
+
+ model Role {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  permissions Permission[] @relation("RolePermissions")
+  users       User[]   @relation("UserRoles")
+ }
+
+ model Permission {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+  roles Role[] @relation("RolePermissions")
+ }
+
+ // Content
+ model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  content     String
+  authorId    Int
+  categoryId  Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  author      User     @relation(fields: [authorId], references: [id])
+  category    Category @relation(fields: [categoryId], references: [id])
+  bookmarks   Bookmark[]
+  likes       Like[]
+  comments    Comment[]
+ }
+
+ model Category {
+  id       Int      @id @default(autoincrement())
+  name     String   @unique
+  articles Article[]
+ }
+
+ model Bookmark {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  articleId Int
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  article   Article  @relation(fields: [articleId], references: [id])
+ }
+
+ model Like {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  articleId Int
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  article   Article  @relation(fields: [articleId], references: [id])
+ }
+
+ model Comment {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  articleId Int
+  content   String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  article   Article  @relation(fields: [articleId], references: [id])
+  replies   Reply[]
+ }
+
+ model Reply {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  commentId  Int
+  content    String
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id])
+  comment    Comment  @relation(fields: [commentId], references: [id])
+ }
+
+ model Notification {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  type      String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+ }
+
+ // Finance
+ model Stock {
+  id          Int      @id @default(autoincrement())
+  symbol      String   @unique
+  name        String
+  marketCap   Float?
+  price       Float?
+  companyId   Int
+  company     Company  @relation(fields: [companyId], references: [id])
+ }
+
+ model Company {
+  id          Int      @id @default(autoincrement())
+  name        String
+  ticker      String   @unique
+  stocks      Stock[]
+ }
+
+ model IPO {
+  id          Int      @id @default(autoincrement())
+  companyId   Int
+  date        DateTime
+  price       Float
+  shares      Int
+  company     Company @relation(fields: [companyId], references: [id])
+ }
+
+ model MutualFund {
+  id          Int      @id @default(autoincrement())
+  name        String
+  symbol      String   @unique
+  nav         Float
+ }
+
+ model Order {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  stockId     Int
+  type        String   // BUY or SELL
+  quantity    Int
+  price       Float
+  status      String   // PENDING, COMPLETED, CANCELED
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+  stock       Stock    @relation(fields: [stockId], references: [id])
+ }
+
+ model Transaction {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  amount      Float
+  type        String   // DEPOSIT, WITHDRAWAL
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+ }
+
+ model Portfolio {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  holdings    Json
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+ }
+
+ model Watchlist {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  name        String
+  symbols     String[]
+  user        User     @relation(fields: [userId], references: [id])
+ }
+
+ // Payments & Subscriptions
+ model Payment {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  amount      Float
+  currency    String
+  status      String   // SUCCESS, FAILED
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+ }
+
+ model Subscription {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  plan        String
+  startDate   DateTime @default(now())
+  endDate     DateTime?
+  status      String   // ACTIVE, CANCELED, EXPIRED
+  user        User     @relation(fields: [userId], references: [id])
+ }
+
+ model Invoice {
+  id          Int      @id @default(autoincrement())
+  subscriptionId Int
+  amount      Float
+  paid        Boolean @default(false)
+  createdAt   DateTime @default(now())
+  subscription Subscription @relation(fields: [subscriptionId], references: [id])
+ }
+
+ // Media
+ model Media {
+  id          Int      @id @default(autoincrement())
+  url         String
+  type        String   // image, video, audio
+  relatedId   Int?
+  relatedType String? // e.g., "Article"
+ }
+
+ // Weather
+ model Weather {
+  id          Int      @id @default(autoincrement())
+  location    String
+  temperature Float
+  aqi         Int?
+  uv          Float?
+  humidity    Float?
+  windSpeed   Float?
+  pressure    Float?
+  sunrise     DateTime?
+  sunset      DateTime?
+  fetchedAt   DateTime @default(now())
+ }
+
+ // Settings & Themes
+ model Theme {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  colors      Json
+ }
+
+ model UserSetting {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  key         String
+  value       String
+  user        User @relation(fields: [userId], references: [id])
+ }
+
+ // Support & Feedback
+ model Feedback {
+  id          Int      @id @default(autoincrement())
+  userId      Int?
+  message     String
+  createdAt   DateTime @default(now())
+  user        User?    @relation(fields: [userId], references: [id])
+ }
+
+ model SupportTicket {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  subject     String
+  description String
+  status      String   @default("OPEN")
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+ }
+
+ // Search & History
+ model SearchHistory {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  query       String
+  timestamp   DateTime @default(now())
+  user        User @relation(fields: [userId], references: [id])
+ }
+
+ model ReadingHistory {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  articleId   Int
+  readAt      DateTime @default(now())
+  user        User @relation(fields: [userId], references: [id])
+  article     Article @relation(fields: [articleId], references: [id])
+ }
+
+ // Analytics & Logs
+ model ActivityLog {
+  id          Int      @id @default(autoincrement())
+  userId      Int?
+  action      String
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  user        User? @relation(fields: [userId], references: [id])
+ }
+
+ model AuditLog {
+  id          Int      @id @default(autoincrement())
+  tableName   String
+  recordId    Int
+  operation   String   // CREATE, UPDATE, DELETE
+  before      Json?
+  after       Json?
+  performedBy Int?
+  performedAt DateTime @default(now())
+ }
+
+ // Additional tables can be added as needed.

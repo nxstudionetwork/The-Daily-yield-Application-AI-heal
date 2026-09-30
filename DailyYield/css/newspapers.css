@@ -1,0 +1,11 @@
+.newspapers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.newspaper-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;transition:all var(--transition)}
+.newspaper-card:hover{border-color:var(--border-light);background:var(--bg-card-hover)}
+.np-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem}
+.np-name{font-size:1rem;font-weight:600}
+.np-badge{font-size:0.7rem;font-weight:600;color:var(--accent);background:var(--accent-dim);padding:0.15rem 0.5rem;border-radius:var(--radius-sm)}
+.np-meta{display:flex;gap:0.75rem;font-size:0.8rem;color:var(--text-muted);margin-bottom:0.75rem}
+.np-stories h4{font-size:0.8rem;font-weight:600;color:var(--text-secondary);margin-bottom:0.35rem}
+.np-stories ul{display:flex;flex-direction:column;gap:0.2rem}
+.np-stories li{font-size:0.85rem;color:var(--text-muted);padding-left:0.75rem;position:relative}
+.np-stories li::before{content:'›';position:absolute;left:0;color:var(--accent)}

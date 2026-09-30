@@ -1,0 +1,138 @@
+<!-- ============================================================
+   Daily Yield — Settings Page
+   App settings, preferences, and configuration
+   ============================================================ -->
+
+<div class="settings-page">
+  <div class="settings-nav">
+    <h2 style="font-size: var(--font-size-lg); font-weight: 700; color: var(--text-primary); margin-bottom: var(--spacing-lg);">Settings</h2>
+    <nav class="settings-nav-list">
+      <span class="topic-chip active">General</span>
+      <span class="topic-chip">Appearance</span>
+      <span class="topic-chip">Notifications</span>
+      <span class="topic-chip">Privacy</span>
+      <span class="topic-chip">Account</span>
+    </nav>
+  </div>
+
+  <div class="settings-content">
+    <!-- General Settings -->
+    <section class="card" style="padding: var(--spacing-xl); margin-bottom: var(--spacing-lg);">
+      <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin-bottom: var(--spacing-lg);">General</h3>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Language</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Select你的 preferred language</div>
+        </div>
+        <span class="topic-chip">English (US)</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Region</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Content localization</div>
+        </div>
+        <span class="topic-chip">United States</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0;">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Data Saver</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Reduce data usage</div>
+        </div>
+        <div style="width: 44px; height: 24px; background: var(--border); border-radius: var(--radius-full); position: relative; cursor: pointer;">
+          <div style="width: 20px; height: 20px; background: var(--text-muted); border-radius: 50%; position: absolute; top: 2px; left: 2px; transition: all var(--transition-fast);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appearance -->
+    <section class="card" style="padding: var(--spacing-xl); margin-bottom: var(--spacing-lg);">
+      <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin-bottom: var(--spacing-lg);">Appearance</h3>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Theme</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Choose your preferred theme</div>
+        </div>
+        <div class="topics-row">
+          <span class="topic-chip active">Dark</span>
+          <span class="topic-chip">Light</span>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Accent Color</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Customize the accent color</div>
+        </div>
+        <div style="display: flex; gap: var(--spacing-sm);">
+          <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--gold); border: 2px solid var(--border-gold); cursor: pointer;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 50%; background: #3b82f6; border: 2px solid transparent; cursor: pointer;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 50%; background: #10b981; border: 2px solid transparent; cursor: pointer;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 50%; background: #ef4444; border: 2px solid transparent; cursor: pointer;"></div>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0;">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Animations</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Enable smooth animations</div>
+        </div>
+        <div style="width: 44px; height: 24px; background: var(--gold); border-radius: var(--radius-full); position: relative; cursor: pointer;">
+          <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; transition: all var(--transition-fast);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notifications -->
+    <section class="card" style="padding: var(--spacing-xl); margin-bottom: var(--spacing-lg);">
+      <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin-bottom: var(--spacing-lg);">Notifications</h3>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Push Notifications</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Receive breaking news alerts</div>
+        </div>
+        <div style="width: 44px; height: 24px; background: var(--gold); border-radius: var(--radius-full); position: relative; cursor: pointer;">
+          <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; transition: all var(--transition-fast);"></div>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Email Digest</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Daily summary via email</div>
+        </div>
+        <div style="width: 44px; height: 24px; background: var(--gold); border-radius: var(--radius-full); position: relative; cursor: pointer;">
+          <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; transition: all var(--transition-fast);"></div>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0;">
+        <div>
+          <div style="font-weight: 500; color: var(--text-primary);">Market Alerts</div>
+          <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Price change notifications</div>
+        </div>
+        <div style="width: 44px; height: 24px; background: var(--border); border-radius: var(--radius-full); position: relative; cursor: pointer;">
+          <div style="width: 20px; height: 20px; background: var(--text-muted); border-radius: 50%; position: absolute; top: 2px; left: 2px; transition: all var(--transition-fast);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Account -->
+    <section class="card" style="padding: var(--spacing-xl); border: 1px solid var(--border-gold);">
+      <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin-bottom: var(--spacing-lg);">Account</h3>
+      
+      <div style="display: flex; gap: var(--spacing-md);">
+        <button class="btn btn-secondary" style="flex: 1;">Change Password</button>
+        <button class="btn btn-secondary" style="flex: 1;">Privacy Policy</button>
+      </div>
+      
+      <div style="margin-top: var(--spacing-lg); padding-top: var(--spacing-lg); border-top: 1px solid var(--border);">
+        <button class="btn" style="width: 100%; color: var(--danger); border-color: var(--danger);">Sign Out</button>
+      </div>
+    </section>
+  </div>
+</div>

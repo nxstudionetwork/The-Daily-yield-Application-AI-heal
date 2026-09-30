@@ -1,0 +1,46 @@
+.about-hero{text-align:center;padding:3rem 1rem;margin-bottom:3rem}
+.about-hero .hero-title{font-size:2rem;font-weight:800;line-height:1.2;margin-bottom:0.75rem}
+.about-hero .hero-subtitle{font-size:1.05rem;color:var(--text-secondary);max-width:550px;margin:0 auto;line-height:1.6}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;margin-bottom:3rem}
+.team-member{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center;transition:all var(--transition)}
+.team-member:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 40px var(--shadow)}
+.team-member .member-avatar{width:80px;height:80px;border-radius:50%;background:var(--gradient-gold);display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;color:#000;margin:0 auto 1rem}
+.team-member .member-name{font-size:1rem;font-weight:600;margin-bottom:0.2rem}
+.team-member .member-role{font-size:0.8rem;color:var(--accent);margin-bottom:0.75rem}
+.team-member .member-bio{font-size:0.8rem;color:var(--text-secondary);line-height:1.5}
+.team-member .member-socials{display:flex;justify-content:center;gap:0.75rem;margin-top:1rem}
+.team-member .member-socials a{color:var(--text-muted);text-decoration:none;font-size:0.8rem;transition:color var(--transition)}
+.team-member .member-socials a:hover{color:var(--accent)}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-bottom:3rem}
+.value-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:all var(--transition)}
+.value-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+.value-card .value-icon{font-size:1.5rem;margin-bottom:0.75rem}
+.value-card .value-title{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
+.value-card .value-desc{font-size:0.85rem;color:var(--text-secondary);line-height:1.6}
+.press-mentions{margin-bottom:3rem}
+.press-mentions .section-title{font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;text-align:center}
+.press-mentions .mentions-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.press-mention{display:flex;align-items:center;justify-content:center;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all var(--transition);min-height:100px}
+.press-mention:hover{border-color:var(--accent)}
+.press-mention .mention-logo{font-size:1.1rem;font-weight:700;color:var(--text-muted);text-align:center;opacity:0.7;transition:opacity var(--transition)}
+.press-mention:hover .mention-logo{opacity:1;color:var(--text-secondary)}
+.careers-list{margin-bottom:2rem}
+.careers-list .section-title{font-size:1.1rem;font-weight:700;margin-bottom:1.5rem}
+.career-item{display:flex;align-items:center;justify-content:space-between;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.75rem;transition:all var(--transition);cursor:pointer}
+.career-item:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+.career-item .career-info{flex:1}
+.career-item .career-title{font-weight:600;font-size:0.95rem;margin-bottom:0.25rem}
+.career-item .career-dept{font-size:0.8rem;color:var(--accent)}
+.career-item .career-location{font-size:0.8rem;color:var(--text-muted);margin-top:0.2rem}
+.career-item .career-apply{padding:0.45rem 1rem;border-radius:var(--radius-sm);font-size:0.8rem;font-weight:600;background:var(--gradient-gold);color:#000;border:none;cursor:pointer;transition:opacity var(--transition);flex-shrink:0;margin-left:1rem}
+.career-item .career-apply:hover{opacity:0.9}
+@media(max-width:768px){
+.about-hero .hero-title{font-size:1.5rem}
+.team-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem}
+.team-member{padding:1.25rem}
+.team-member .member-avatar{width:64px;height:64px;font-size:1.2rem}
+.values-grid{grid-template-columns:1fr}
+.press-mentions .mentions-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.career-item{flex-direction:column;align-items:flex-start;gap:0.75rem}
+.career-item .career-apply{margin-left:0;width:100%;text-align:center}
+}

@@ -1,0 +1,811 @@
+/* ==========================================================================
+   RESPONSIVE — The Daily Yield
+   15 breakpoints + reduced-motion + print.
+   Breakpoints: 320, 360, 400, 480, 576, 640, 768, 820, 900, 1024,
+                1100, 1200, 1280, 1440, 1920
+   ========================================================================== */
+
+/* ── 320px — Small phones ────────────────────────────────────────────────── */
+@media (max-width: 320px) {
+  :root {
+    --header-h: 48px;
+    --ticker-h: 32px;
+    --bottom-nav-h: 56px;
+  }
+
+  .main-content {
+    padding: 0.75rem;
+  }
+
+  .page-title {
+    font-size: 1.1rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .index-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .profile-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .shortcuts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .news-list-img {
+    width: 64px;
+    height: 48px;
+  }
+}
+
+/* ── 360px — Standard small phones ───────────────────────────────────────── */
+@media (max-width: 360px) {
+  .main-content {
+    padding: 0.75rem;
+  }
+
+  .page-title {
+    font-size: 1.15rem;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .index-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-row {
+    grid-template-columns: 1fr auto;
+  }
+
+  .stock-row > :nth-child(n+3) {
+    display: none;
+  }
+
+  .stock-list-header {
+    display: none;
+  }
+}
+
+/* ── 400px — Large small phones ──────────────────────────────────────────── */
+@media (max-width: 400px) {
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .theme-options {
+    flex-wrap: wrap;
+  }
+
+  .page-actions {
+    width: 100%;
+  }
+
+  .page-actions .btn {
+    flex: 1;
+  }
+}
+
+/* ── 480px — Small phones landscape / large phones ──────────────────────── */
+@media (max-width: 480px) {
+  .index-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-options {
+    flex-wrap: wrap;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weather-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notification-panel {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+/* ── 576px — phones landscape ────────────────────────────────────────────── */
+@media (max-width: 576px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .index-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .weather-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-list-img {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+/* ── 640px — Tablets portrait ────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .index-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-side {
+    grid-template-columns: 1fr;
+  }
+
+  .shortcuts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── 768px — Tablets / breakpoint: bottom nav visible, sidebar overlay ───── */
+@media (max-width: 768px) {
+  :root {
+    --header-h: 52px;
+    --sidebar-w: 280px;
+  }
+
+  .header-center {
+    display: none;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .bottom-nav {
+    display: flex;
+  }
+
+  .main-layout {
+    margin-bottom: var(--bottom-nav-h);
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-list-img {
+    width: 80px;
+    height: 60px;
+  }
+
+  .notifications-panel {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .ai-page {
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+  }
+
+  .ai-sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ai-chats-list {
+    display: none;
+  }
+
+  .ai-messages {
+    min-height: 50vh;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .weather-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .index-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stock-list-header {
+    display: none;
+  }
+
+  .stock-row {
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .stock-row > :nth-child(4),
+  .stock-row > :nth-child(5),
+  .stock-row > :nth-child(6) {
+    display: none;
+  }
+
+  .profile-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: calc(var(--bottom-nav-h) + 0.5rem);
+  }
+
+  .toast {
+    max-width: 100%;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .two-col-side {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── 820px — Tablets landscape / small laptops ──────────────────────────── */
+@media (max-width: 820px) {
+  .stock-list-header {
+    grid-template-columns: 2fr 1fr 1fr 80px;
+  }
+
+  .stock-list-header > :nth-child(4),
+  .stock-list-header > :nth-child(5),
+  .stock-list-header > :nth-child(6) {
+    display: none;
+  }
+
+  .stock-row {
+    grid-template-columns: 2fr 1fr 1fr 80px;
+  }
+
+  .stock-row > :nth-child(4),
+  .stock-row > :nth-child(5),
+  .stock-row > :nth-child(6) {
+    display: none;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .index-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── 900px — Small laptops ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .stock-list-header {
+    grid-template-columns: 2fr 1fr 1fr 80px;
+  }
+
+  .stock-list-header > :nth-child(5),
+  .stock-list-header > :nth-child(6) {
+    display: none;
+  }
+
+  .stock-row {
+    grid-template-columns: 2fr 1fr 1fr 80px;
+  }
+
+  .stock-row > :nth-child(5),
+  .stock-row > :nth-child(6) {
+    display: none;
+  }
+
+  .profile-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shortcuts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── 1024px — Laptops ───────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .stock-list-header {
+    grid-template-columns: 2fr 1fr 1fr 80px;
+  }
+
+  .stock-list-header > :nth-child(4),
+  .stock-list-header > :nth-child(5) {
+    display: none;
+  }
+
+  .stock-row {
+    grid-template-columns: 2fr 1fr 1fr 80px;
+  }
+
+  .stock-row > :nth-child(4),
+  .stock-row > :nth-child(5) {
+    display: none;
+  }
+
+  .profile-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .shortcuts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-side {
+    grid-template-columns: 1fr;
+  }
+
+  .right-sidebar {
+    position: static;
+  }
+}
+
+/* ── 1100px — Small desktops ────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-side {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .right-sidebar {
+    position: static;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── 1200px — Standard desktops ─────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .main-content {
+    max-width: 100%;
+  }
+
+  .two-col {
+    max-width: 100%;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── 1280px — Large desktops: sidebar becomes static ────────────────────── */
+@media (max-width: 1280px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-layout {
+    margin-left: 0;
+  }
+
+  .header {
+    left: 0;
+  }
+
+  .ticker-bar {
+    left: 0;
+  }
+}
+
+/* ── 1440px — Extra large desktops ──────────────────────────────────────── */
+@media (min-width: 1440px) {
+  .main-content {
+    max-width: 1320px;
+  }
+
+  .two-col {
+    max-width: 1440px;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── 1920px — Ultra-wide ────────────────────────────────────────────────── */
+@media (min-width: 1920px) {
+  .main-content {
+    max-width: 1600px;
+  }
+
+  .two-col {
+    max-width: 1800px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ── Reduced Motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .pulse-dot {
+    animation: none;
+  }
+
+  .badge-live {
+    animation: none;
+  }
+
+  .skeleton,
+  .skeleton-text,
+  .skeleton-circle,
+  .skeleton-img {
+    animation: none;
+  }
+
+  .ticker-text {
+    animation: none;
+  }
+
+  .toast {
+    transition: none;
+  }
+
+  .sidebar {
+    transition: none;
+  }
+
+  .notifications-panel {
+    transition: none;
+  }
+
+  .search-panel,
+  .command-palette,
+  .modal-overlay,
+  .shortcuts-overlay {
+    transition: none;
+  }
+}
+
+/* ── Print Styles ────────────────────────────────────────────────────────── */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .header,
+  .ticker-bar,
+  .sidebar,
+  .bottom-nav,
+  .notifications-panel,
+  .search-panel,
+  .command-palette,
+  .modal-overlay,
+  .shortcuts-overlay,
+  .toast-container,
+  .btn,
+  .icon-btn,
+  .menu-btn,
+  .page-actions,
+  .section-link,
+  .tab-group,
+  .sidebar-overlay {
+    display: none !important;
+  }
+
+  .main-layout {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .main-content {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  .card,
+  .portfolio-card,
+  .news-card,
+  .widget {
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+
+  .card-grid,
+  .video-grid,
+  .index-grid,
+  .forecast-grid,
+  .shorts-grid,
+  .tools-grid,
+  .cities-grid,
+  .settings-grid,
+  .profile-sections,
+  .profile-stats,
+  .shortcuts-grid,
+  .weather-detail-grid {
+    display: grid;
+    gap: 1rem;
+  }
+}

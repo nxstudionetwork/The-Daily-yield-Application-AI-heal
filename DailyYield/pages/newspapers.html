@@ -1,0 +1,119 @@
+<!-- ============================================================
+   Daily Yield — Newspapers Page
+   Digital newspaper hub and reading experience
+   ============================================================ -->
+
+<div class="newspapers-page">
+  <!-- Header -->
+  <div class="section-header">
+    <h1 class="section-title">Newspapers</h1>
+    <div class="topics-row">
+      <span class="topic-chip active">All</span>
+      <span class="topic-chip">US</span>
+      <span class="topic-chip">International</span>
+      <span class="topic-chip">Business</span>
+      <span class="topic-chip">Tech</span>
+    </div>
+  </div>
+
+  <!-- Featured Newspaper -->
+  <section class="hero-section" style="min-height: 350px;">
+    <div class="hero-bg"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <span class="hero-category">Featured Edition</span>
+      <h2 class="hero-title">The Daily Times - Morning Edition</h2>
+      <p class="hero-excerpt">Your comprehensive morning briefing covering politics, business, technology, and world affairs.</p>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Today
+        </span>
+        <span class="hero-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          24 pages
+        </span>
+      </div>
+      <button class="btn btn-primary" style="margin-top: var(--spacing-md);">
+        Read Full Edition
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Newspaper Grid -->
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Available Newspapers</h2>
+    </div>
+    <div class="newspaper-grid">
+      <article class="card" style="padding: var(--spacing-lg); cursor: pointer; transition: all var(--transition);">
+        <div style="font-size: 48px; margin-bottom: var(--spacing-md);">📰</div>
+        <h3 class="news-card-title" style="margin-bottom: var(--spacing-sm);">The Daily Times</h3>
+        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--spacing-md);">Comprehensive coverage of national and international news.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="topic-chip" style="font-size: var(--font-size-xs);">US</span>
+          <span style="color: var(--text-muted); font-size: var(--font-size-xs);">Daily</span>
+        </div>
+      </article>
+      <article class="card" style="padding: var(--spacing-lg); cursor: pointer; transition: all var(--transition);">
+        <div style="font-size: 48px; margin-bottom: var(--spacing-md);">🗞️</div>
+        <h3 class="news-card-title" style="margin-bottom: var(--spacing-sm);">Financial Chronicle</h3>
+        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--spacing-md);">In-depth analysis of markets, economy, and business trends.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="topic-chip" style="font-size: var(--font-size-xs);">Business</span>
+          <span style="color: var(--text-muted); font-size: var(--font-size-xs);">Daily</span>
+        </div>
+      </article>
+      <article class="card" style="padding: var(--spacing-lg); cursor: pointer; transition: all var(--transition);">
+        <div style="font-size: 48px; margin-bottom: var(--spacing-md);">🌐</div>
+        <h3 class="news-card-title" style="margin-bottom: var(--spacing-sm);">World Gazette</h3>
+        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--spacing-md);">Global perspectives on international affairs and culture.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="topic-chip" style="font-size: var(--font-size-xs);">International</span>
+          <span style="color: var(--text-muted); font-size: var(--font-size-xs);">Weekly</span>
+        </div>
+      </article>
+      <article class="card" style="padding: var(--spacing-lg); cursor: pointer; transition: all var(--transition);">
+        <div style="font-size: 48px; margin-bottom: var(--spacing-md);">💻</div>
+        <h3 class="news-card-title" style="margin-bottom: var(--spacing-sm);">Tech Review</h3>
+        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--spacing-md);">Latest in technology, innovation, and digital culture.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="topic-chip" style="font-size: var(--font-size-xs);">Technology</span>
+          <span style="color: var(--text-muted); font-size: var(--font-size-xs);">Weekly</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Reading Mode Options -->
+  <section class="card" style="padding: var(--spacing-lg);">
+    <div class="section-header">
+      <h2 class="section-title">Reading Preferences</h2>
+    </div>
+    <div style="display: flex; gap: var(--spacing-lg); align-items: center;">
+      <div>
+        <div style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">Font Size</div>
+        <div class="topics-row">
+          <span class="topic-chip">A</span>
+          <span class="topic-chip active">A</span>
+          <span class="topic-chip">A</span>
+        </div>
+      </div>
+      <div>
+        <div style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--spacing-xs);">Theme</div>
+        <div class="topics-row">
+          <span class="topic-chip active">Dark</span>
+          <span class="topic-chip">Sepia</span>
+          <span class="topic-chip">Light</span>
+        </div>
+      </div>
+      <div style="margin-left: auto;">
+        <button class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          Focus Mode
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

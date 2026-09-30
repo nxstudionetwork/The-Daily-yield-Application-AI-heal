@@ -1,0 +1,45 @@
+.portfolio-summary{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+.portfolio-stat{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;transition:all var(--transition)}
+.portfolio-stat:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+.portfolio-stat .stat-label{font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem}
+.portfolio-stat .stat-value{font-size:1.4rem;font-weight:700}
+.portfolio-stat .stat-change{font-size:0.8rem;font-weight:600;margin-top:0.25rem}
+.stat-change.positive{color:var(--positive)}.stat-change.negative{color:var(--negative)}.stat-change.neutral{color:var(--neutral)}
+.holdings-table{width:100%;border-collapse:collapse;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2rem}
+.holdings-table th{padding:0.75rem 1rem;text-align:left;font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;background:var(--bg-tertiary);border-bottom:1px solid var(--border)}
+.holdings-table td{padding:0.75rem 1rem;font-size:0.85rem;border-bottom:1px solid var(--border-light);transition:background var(--transition)}
+.holdings-table tr:hover td{background:var(--bg-card-hover)}
+.holdings-table tr:last-child td{border-bottom:none}
+.holdings-table .ticker{font-weight:700;color:var(--accent)}
+.holdings-table .shares{color:var(--text-secondary)}
+.allocation-chart{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem}
+.allocation-chart .chart-title{font-size:1rem;font-weight:600;margin-bottom:1rem}
+.donut-chart{width:200px;height:200px;margin:0 auto 1rem;position:relative}
+.donut-chart svg{width:100%;height:100%;transform:rotate(-90deg)}
+.donut-chart .chart-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.donut-chart .chart-center .center-value{font-size:1.2rem;font-weight:700}
+.donut-chart .chart-center .center-label{font-size:0.7rem;color:var(--text-muted)}
+.allocation-legend{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center}
+.legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--text-secondary)}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.transaction-list{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.transaction-list .list-header{padding:1rem 1.25rem;border-bottom:1px solid var(--border);font-weight:600;font-size:0.95rem}
+.transaction-item{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.25rem;border-bottom:1px solid var(--border-light);transition:background var(--transition)}
+.transaction-item:last-child{border-bottom:none}
+.transaction-item:hover{background:var(--bg-card-hover)}
+.transaction-item .tx-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0}
+.tx-icon.buy{background:rgba(0,200,83,0.15);color:var(--positive)}
+.tx-icon.sell{background:rgba(255,23,68,0.15);color:var(--negative)}
+.tx-icon.dividend{background:rgba(212,160,23,0.15);color:var(--accent)}
+.transaction-item .tx-details{flex:1}
+.transaction-item .tx-ticker{font-weight:600;font-size:0.9rem}
+.transaction-item .tx-date{font-size:0.75rem;color:var(--text-muted)}
+.transaction-item .tx-amount{text-align:right;font-weight:600;font-size:0.9rem}
+@media(max-width:768px){
+.portfolio-summary{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:0.75rem}
+.portfolio-stat .stat-value{font-size:1.1rem}
+.holdings-table{font-size:0.8rem}
+.holdings-table th,.holdings-table td{padding:0.6rem 0.75rem}
+.donut-chart{width:160px;height:160px}
+.transaction-item{padding:0.75rem 1rem}
+}

@@ -1,0 +1,17 @@
+.profile-header-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.5rem}
+.profile-cover{height:150px;background:var(--gradient-gold)}
+.profile-info{display:flex;flex-direction:column;align-items:center;padding:0 1rem 1.5rem;margin-top:-40px}
+.profile-avatar-lg{width:80px;height:80px;border-radius:50%;background:var(--gradient-gold);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;color:#000;border:4px solid var(--bg-card)}
+.profile-name{font-size:1.25rem;font-weight:700;margin-top:0.5rem}
+.profile-email{font-size:0.85rem;color:var(--text-muted)}
+.profile-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+.profile-stat{display:flex;flex-direction:column;align-items:center;padding:1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)}
+.stat-value{font-size:1.5rem;font-weight:800;color:var(--accent)}
+.stat-label{font-size:0.8rem;color:var(--text-muted)}
+.profile-sections{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.profile-section{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem}
+.profile-section h3{font-size:1rem;font-weight:600;margin-bottom:1rem}
+.profile-links{display:flex;flex-direction:column;gap:0.5rem}
+.profile-link{display:flex;align-items:center;gap:0.75rem;padding:0.5rem;border-radius:var(--radius-sm);color:var(--text-secondary);transition:all var(--transition);font-size:0.9rem}
+.profile-link:hover{color:var(--accent);background:var(--accent-dim)}
+.profile-form{display:flex;flex-direction:column;gap:0.75rem}

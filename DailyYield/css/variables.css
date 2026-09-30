@@ -1,0 +1,206 @@
+/* ==========================================================================
+   DESIGN TOKENS — The Daily Yield
+   Premium Enterprise-Grade Design System
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* ── Premium Backgrounds ───────────────────────────────────────────────── */
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --bg-elevated: #161616;
+  --bg-sidebar: #080808;
+  --bg-overlay: rgba(0, 0, 0, 0.85);
+
+  /* ── Surface Colors ─────────────────────────────────────────────────────── */
+  --surface-primary: #0d0d0d;
+  --surface-secondary: #121212;
+  --surface-tertiary: #1a1a1a;
+
+  /* ── Card Backgrounds ──────────────────────────────────────────────────── */
+  --bg-card: #141414;
+  --bg-card-hover: #1a1a1a;
+  --bg-card-active: #1f1f1f;
+
+  /* ── Premium Borders ─────────────────────────────────────────────────────── */
+  --border: #2a2a2a;
+  --border-light: #3a3a3a;
+  --border-subtle: #1f1f1f;
+  --border-gold: rgba(212, 175, 55, 0.3);
+
+  /* ── Luxury Gold Palette ────────────────────────────────────────────────── */
+  --accent: #D4AF37;
+  --accent-hover: #E5C048;
+  --accent-active: #C9A030;
+  --accent-dim: rgba(212, 175, 55, 0.15);
+  --accent-glow: rgba(212, 175, 55, 0.25);
+  --gold: #D4AF37;
+  --gold-light: #F0D060;
+  --gold-dark: #B8860B;
+  --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F0D060 50%, #D4AF37 100%);
+
+  /* ── Premium Blue ───────────────────────────────────────────────────────── */
+  --blue: #3B82F6;
+  --blue-light: #60A5FA;
+  --blue-dark: #2563EB;
+  --blue-dim: rgba(59, 130, 246, 0.15);
+
+  /* ── Text Hierarchy ─────────────────────────────────────────────────────── */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #6b6b6b;
+  --text-dim: #4a4a4a;
+
+  /* ── Semantic Colors ───────────────────────────────────────────────────── */
+  --positive: #10B981;
+  --positive-light: #34D399;
+  --positive-dim: rgba(16, 185, 129, 0.15);
+  --negative: #EF4444;
+  --negative-light: #F87171;
+  --negative-dim: rgba(239, 68, 68, 0.15);
+  --warning: #F59E0B;
+  --warning-light: #FBBF24;
+  --warning-dim: rgba(245, 158, 11, 0.15);
+  --info: #3B82F6;
+  --info-dim: rgba(59, 130, 246, 0.15);
+  --neutral: #6B7280;
+
+  /* ── Premium Shadows ───────────────────────────────────────────────────── */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.15);
+  --shadow-blue: 0 4px 20px rgba(59, 130, 246, 0.15);
+
+  /* ── Glassmorphism Effects ───────────────────────────────────────────────── */
+  --glass-bg: rgba(20, 20, 20, 0.7);
+  --glass-bg-strong: rgba(16, 16, 16, 0.85);
+  --glass-bg-subtle: rgba(20, 20, 20, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-strong: rgba(255, 255, 255, 0.12);
+  --glass-blur: blur(20px);
+  --glass-blur-strong: blur(30px);
+
+  /* ── Premium Gradients ─────────────────────────────────────────────────── */
+  --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  --gradient-gold-light: linear-gradient(135deg, #F0D060 0%, #D4AF37 100%);
+  --gradient-gold-reverse: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(5,5,5,0) 0%, rgba(5,5,5,0.95) 100%);
+  --gradient-radial: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  --gradient-blue: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+
+  /* ── Typography ────────────────────────────────────────────────────────── */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+
+  /* ── Spacing Scale ─────────────────────────────────────────────────────── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Border Radius ──────────────────────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-full: 9999px;
+
+  /* ── Motion & Animation ─────────────────────────────────────────────────── */
+  --transition-instant: 0.1s ease;
+  --transition-fast: 0.15s ease;
+  --transition: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --transition-slower: 0.4s ease;
+  --transition-slowest: 0.5s ease;
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ── Layout Dimensions ───────────────────────────────────────────────────── */
+  --header-h: 64px;
+  --ticker-h: 40px;
+  --sidebar-w: 280px;
+  --sidebar-collapsed-w: 72px;
+  --bottom-nav-h: 68px;
+  --right-sidebar-w: 340px;
+  --content-max-width: 1400px;
+  --container-max-width: 1600px;
+
+  /* ── Z-Index Scale ──────────────────────────────────────────────────────── */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+
+  /* ── Input / Form ──────────────────────────────────────────────────────── */
+  --input-bg: #141414;
+  --input-bg-focus: #1a1a1a;
+  --input-bg-disabled: #0f0f0f;
+  --input-border: #2a2a2a;
+  --input-border-focus: #D4AF37;
+  --input-border-error: #EF4444;
+
+  /* ── Scrollbar ─────────────────────────────────────────────────────────── */
+  --scrollbar-thumb: #3a3a3a;
+  --scrollbar-thumb-hover: #4a4a4a;
+  --scrollbar-track: transparent;
+
+  /* ── Ticker ────────────────────────────────────────────────────────────── */
+  --ticker-bg: #080808;
+  --ticker-border: #1a1a1a;
+
+  /* ── Blur Effects ───────────────────────────────────────────────────────── */
+  --blur-sm: blur(4px);
+  --blur: blur(8px);
+  --blur-md: blur(12px);
+  --blur-lg: blur(16px);
+  --blur-xl: blur(24px);
+  --blur-2xl: blur(40px);
+  --blur-3xl: blur(64px);
+
+  /* ── Animation Durations ─────────────────────────────────────────────────── */
+  --duration-fast: 150ms;
+  --duration: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 400ms;
+  --duration-slowest: 500ms;
+}

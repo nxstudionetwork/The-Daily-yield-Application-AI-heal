@@ -1,0 +1,68 @@
+.research-filters{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;flex-wrap:wrap}
+.research-filters .filter-btn{padding:0.45rem 1rem;border-radius:var(--radius-sm);font-size:0.8rem;font-weight:500;background:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary);cursor:pointer;transition:all var(--transition)}
+.research-filters .filter-btn:hover{border-color:var(--accent);color:var(--accent)}
+.research-filters .filter-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent)}
+.research-filters .search-input{flex:1;min-width:200px;padding:0.5rem 1rem;border-radius:var(--radius-sm);font-size:0.85rem;background:var(--input-bg);border:1px solid var(--border);color:var(--text-primary);transition:border-color var(--transition)}
+.research-filters .search-input:focus{outline:none;border-color:var(--accent)}
+.research-filters .search-input::placeholder{color:var(--text-muted)}
+.research-report{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;margin-bottom:1rem;transition:all var(--transition);cursor:pointer}
+.research-report:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+.research-report .report-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;flex-wrap:wrap;gap:0.5rem}
+.research-report .report-ticker{font-weight:700;font-size:1rem;color:var(--accent)}
+.research-report .report-date{font-size:0.75rem;color:var(--text-muted)}
+.research-report .report-title{font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;line-height:1.3}
+.research-report .report-summary{font-size:0.85rem;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.research-report .report-footer{display:flex;align-items:center;gap:1rem;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border-light)}
+.research-report .analyst-name{font-size:0.8rem;color:var(--text-secondary)}
+.research-report .source{font-size:0.75rem;color:var(--text-muted)}
+.analyst-rating{display:flex;align-items:center;gap:1rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:2rem}
+.analyst-rating .rating-visual{display:flex;flex-direction:column;align-items:center;gap:0.5rem}
+.analyst-rating .rating-circle{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:800;border:3px solid var(--accent);color:var(--accent)}
+.analyst-rating .rating-label{font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em}
+.analyst-rating .rating-details{flex:1}
+.analyst-rating .rating-breakdown{display:flex;flex-direction:column;gap:0.4rem}
+.rating-bar-row{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem}
+.rating-bar-row .bar-label{min-width:60px;color:var(--text-secondary)}
+.rating-bar-row .bar-track{flex:1;height:6px;background:var(--bg-tertiary);border-radius:3px;overflow:hidden}
+.rating-bar-row .bar-fill{height:100%;border-radius:3px;transition:width 0.5s ease}
+.rating-bar-row .bar-fill.buy{background:var(--positive)}
+.rating-bar-row .bar-fill.hold{background:var(--neutral)}
+.rating-bar-row .bar-fill.sell{background:var(--negative)}
+.rating-bar-row .bar-count{min-width:24px;text-align:right;color:var(--text-muted);font-size:0.75rem}
+.rating-badge{display:inline-flex;align-items:center;gap:0.3rem;padding:0.25rem 0.65rem;border-radius:var(--radius-sm);font-size:0.75rem;font-weight:600}
+.rating-badge.buy{background:rgba(0,200,83,0.15);color:var(--positive)}
+.rating-badge.hold{background:rgba(117,117,117,0.15);color:var(--neutral)}
+.rating-badge.sell{background:rgba(255,23,68,0.15);color:var(--negative)}
+.rating-badge.overweight{background:rgba(0,200,83,0.15);color:var(--positive)}
+.rating-badge.equal-weight{background:rgba(117,117,117,0.15);color:var(--neutral)}
+.rating-badge.underweight{background:rgba(255,23,68,0.15);color:var(--negative)}
+.earnings-calendar{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2rem}
+.earnings-calendar .calendar-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border)}
+.earnings-calendar .calendar-title{font-weight:600;font-size:0.95rem}
+.earnings-calendar .calendar-nav{display:flex;gap:0.5rem}
+.earnings-calendar .calendar-nav button{padding:0.35rem 0.75rem;border-radius:var(--radius-sm);background:var(--bg-tertiary);border:1px solid var(--border);color:var(--text-secondary);cursor:pointer;font-size:0.8rem;transition:all var(--transition)}
+.earnings-calendar .calendar-nav button:hover{border-color:var(--accent);color:var(--accent)}
+.earnings-calendar .calendar-day{padding:0.75rem 1.25rem;border-bottom:1px solid var(--border-light)}
+.earnings-calendar .calendar-day:last-child{border-bottom:none}
+.earnings-calendar .day-label{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;margin-bottom:0.5rem}
+.earnings-calendar .earnings-item{display:flex;align-items:center;justify-content:space-between;padding:0.4rem 0}
+.earnings-calendar .earnings-item .ticker{font-weight:600;font-size:0.85rem;color:var(--accent)}
+.earnings-calendar .earnings-item .company-name{font-size:0.8rem;color:var(--text-secondary);flex:1;margin-left:0.75rem}
+.earnings-calendar .earnings-item .time{font-size:0.75rem;color:var(--text-muted)}
+.sector-analysis{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-bottom:2rem}
+.sector-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;transition:all var(--transition)}
+.sector-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+.sector-card .sector-name{font-size:0.9rem;font-weight:600;margin-bottom:0.5rem}
+.sector-card .sector-performance{display:flex;align-items:baseline;gap:0.5rem;margin-bottom:0.75rem}
+.sector-card .sector-performance .perf-value{font-size:1.1rem;font-weight:700}
+.sector-card .sector-performance .perf-period{font-size:0.75rem;color:var(--text-muted)}
+.sector-card .sector-stocks{display:flex;flex-wrap:wrap;gap:0.35rem}
+.sector-card .sector-stocks .stock-tag{padding:0.2rem 0.5rem;border-radius:var(--radius-sm);font-size:0.7rem;background:var(--bg-tertiary);color:var(--text-secondary)}
+@media(max-width:768px){
+.research-filters{gap:0.5rem}
+.research-filters .search-input{min-width:100%}
+.analyst-rating{flex-direction:column;text-align:center}
+.analyst-rating .rating-details{width:100%}
+.sector-analysis{grid-template-columns:1fr}
+.earnings-calendar .earnings-item .company-name{display:none}
+}
